@@ -1,12 +1,57 @@
----
-layout: default
-heading: One Page Wonder
-subheading: Will Knock Your Socks Off
----
+<!doctype html>
+<html class="no-js" lang="">
 
-{% include header.html %}
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
-<div class="container">
-  {% include features.html %}
-  {% include footer.html %}
-</div>
+    <link rel="manifest" href="../../../Downloads/html5-boilerplate_v7/site.webmanifest">
+    <link rel="apple-touch-icon" href="../../../Downloads/html5-boilerplate_v7/icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<header>
+    <div id="nametag">
+        <h1>Anders Norås</h1>
+    </div>
+    <section id="collage">
+        <div id="horn"></div>
+        <div id="funnel"></div>
+        <div id="recordcontainer">
+            <div id="record"></div>
+        </div>
+        <div id="collageman"></div>
+        <div id="collagehead"></div>
+        <div id="collagetonearm"></div>
+        <div id="moon"></div>
+        <div id="venus"></div>
+        <div id="jupiter"></div>
+    </section>
+</header>
+
+</body>
+<script>
+    window.addEventListener("resize", function() {
+        var baseSize = { w: 1280, h: 1350 };
+        var newScale = 1;
+        if (window.innerWidth/window.innerHeight < baseSize.w/baseSize.h) {
+            newScale = window.innerWidth / baseSize.w;
+        } else {
+            newScale = window.innerHeight / baseSize.h;
+        }
+        newScale = Math.min(newScale, 1);
+        document.querySelector("header").style.transform = "scale(" + newScale + "," + newScale +")";
+        console.log("Changed scale to: " + newScale);
+    });
+
+</script>
+</html>

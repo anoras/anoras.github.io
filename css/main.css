@@ -1,0 +1,573 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+body {
+  background-image: url("../img/texture.png");
+}
+header {
+  margin-left: 0px;
+ }
+
+#nametag {
+  width: 400px;
+  background-color: deeppink;
+  text-align: left;
+  position: absolute;
+  top:0;
+  left: 80px;
+  height: 400px;
+  padding-left: 10px;
+  padding-top: 0px;
+  margin-top: 4px;
+}
+h1 {
+  position: relative;
+  top: -80px;
+  font-size: 72pt;
+  color: white;
+  font-family: 'Noto Serif', serif;
+}
+
+#collage {
+  zoom: 50%;
+}
+#horn {
+  position: absolute;
+  z-index: 1;
+  background-image: url("../img/horn.png");
+  width: 668px;
+  height: 1272px;
+  left: 844px;
+  top: 1295px;
+  animation: headnod 2s infinite;
+  transform-origin: top right;
+}
+#funnel {
+  position: absolute;
+  z-index: 1;
+  background-image: url("../img/funnel.png");
+  width: 1083px;
+  height: 1220px;
+  left: 960px;
+  top: 260px;
+  animation: heartbeat 1s infinite;
+  transform-origin: bottom;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.1);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% { -webkit-transform: scale3d(1, 1, 1); }
+  50% { -webkit-transform: scale3d(1.05, 1.05, 1.05); }
+  100% { -webkit-transform: scale3d(1, 1, 1); }
+}
+@keyframes pulse {
+  0% { transform: scale3d(1, 1, 1); }
+  50% { transform: scale3d(1.05, 1.05, 1.05); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+#recordcontainer {
+  position: absolute;
+  left: 400px;
+  top: 1550px;
+  z-index: 2;
+  transform: scale(0.75,0.35);
+}
+#record {
+  position: relative;
+  background-image: url("../img/record2.png");
+  width: 1621px;
+  height: 1660px;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+#collageman {
+  position: absolute;
+  z-index: 3;
+  left: 1000px;
+  top: 1000px;
+  background-image: url("../img/man.png");
+  width: 427px;
+  height: 1444px;
+}
+#collagehead {
+  position: absolute;
+  z-index: 4;
+  left:1170px;
+  top:960px;
+  background-image: url("../img/head.png");
+  width: 167px;
+  height: 237px;
+  transform-origin: bottom left;
+  animation: headnod 2s infinite;
+}
+@keyframes headnod {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#collagetonearm {
+  position: absolute;
+  z-index: 5;
+  background-image: url("../img/tonearm.png");
+  left: 1170px;
+  top: 2130px;
+  width: 956px;
+  height: 525px;
+}
+
+#moon {
+  position: absolute;
+  background-image: url("../img/moon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 588px;
+  width: 588px;
+  left: 50px;
+  top: 1200px;
+  z-index: 4;
+  animation: orbit 20s infinite ease-in-out, orbity 50s infinite ease;
+  transform-origin: center;
+}
+#venus {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/venus.png");
+  height: 398px;
+  width: 400px;
+  transform-origin: center;
+  left: 50px;
+  top: 1200px;
+  animation: orbit 20s infinite ease-in-out, orbity 50s infinite ease;
+  animation-delay: -6.6s;
+}
+#jupiter{
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/jupiter.png");
+  height: 588px;
+  width: 626px;
+  transform-origin: center;
+  left: 50px;
+  top: 1200px;
+  animation: orbit 20s infinite ease-in-out, orbity 50s infinite ease;
+  animation-delay: -13.2s;
+}
+@keyframes orbity {
+  0% {
+    top:1200px;
+  }
+  50% {
+    top: 1500px;
+  }
+  100% {
+    top: 1200px;
+  }
+
+}
+
+@keyframes orbit {
+  0% {
+    left: 50px;
+    z-index: 20;
+    zoom:0.6;
+  }
+  25% {
+    zoom: 1;
+  }
+  50% {
+    left: 3000px;
+    z-index: 0;
+    zoom:0.6;
+  }
+  75% {
+    zoom: 0.3;
+  }
+  100% {
+    left: 55px;
+    zoom:0.6;
+    z-index: 0;
+  }
+}
+
+
+.ball-1 {
+  background-image: url("../img/moon.png");
+  height: 588px;
+  width: 588px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  z-index: 1;
+  animation: shrink 4.5s infinite linear;
+}
+.ball-1:before {
+  content: '';
+  background: #7db9e8;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+}
+.ball-2,
+.ball-3,
+.ball-4 {
+  position: absolute;
+  /* background: rgba(0,0,255,.5); */
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.ball-2:before,
+.ball-3:before,
+.ball-4:before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #333;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+}
+.ball-2 {
+  animation: zindex 1.5s 0.75s infinite steps(2, end);
+}
+.ball-3 {
+  transform: rotate(120deg);
+  animation: zindex 1.5s -0.25s infinite steps(2, end);
+}
+.ball-4 {
+  transform: rotate(240deg);
+  animation: zindex 1.5s 0.25s infinite steps(2, end);
+}
+.ball-2:before {
+  transform: rotate(0);
+  animation: position 1.5s infinite ease, size 1.5s -1.125s infinite ease;
+}
+.ball-3:before {
+  animation: position 1.5s -1s infinite ease, size 1.5s -0.75s infinite ease;
+}
+.ball-4:before {
+  animation: position 1.5s -0.5s infinite ease, size 1.5s -0.125s infinite ease;
+}
+@keyframes position {
+  50% {
+    top: 80px;
+    left: 80px;
+  }
+}
+@keyframes size {
+  50% {
+    transform: scale(0.5, 0.5);
+  }
+}
+@keyframes zindex {
+  100% {
+    z-index: 10;
+  }
+}
+@keyframes shrink {
+  50% {
+    transform: scale(0.9, 0.9);
+  }
+}
