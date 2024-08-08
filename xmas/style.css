@@ -1,0 +1,201 @@
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            margin-top: 20px;
+        }
+        .header img {
+            width: 100%;
+            max-width: 400px;
+        }
+        .content {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .content img {
+            width: 100%;
+            max-width: 300px;
+            float: left;
+            margin: 0 20px 20px 0;
+        }
+
+        .cta {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .content, .footer {
+                padding: 10px;
+                width: 100%;
+            }
+            .content img {
+                float: none;
+                display: block;
+                margin: 0 auto 10px;
+            }
+        }
+        .snowflake {
+            z-index: -1000;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(white, white);
+            /* Workaround for Chromium's selective color inversion */
+            border-radius: 50%;
+            filter: drop-shadow(0 0 10px white);
+        }        
+        @font-face {
+        font-family: 'CustomFont';
+            src: url('mercy.ttf') format('truetype'); /* Adjust the file name and format as needed */
+        }   
+        h1 {
+            font-family: 'CustomFont', cursive;
+            background: linear-gradient(to right, #ffa500 0%, #ffd700 20%, #ffd700 50%, #ffa500 100%); 
+            text-shadow: 0 0 10px rgba(244, 186, 76, 0.5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;            
+            display: inline-block;
+            margin-bottom: -10px;
+        }
+        h2 {
+            font-family: 'CustomFont', cursive;
+            background: linear-gradient(to right, #ffa500 0%, #ffd700 20%, #ffd700 50%, #ffa500 100%); 
+            text-shadow: 0 0 10px rgba(244, 186, 76, 0.5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;            
+            display: inline-block;
+            margin-bottom: -10px;
+        }        
+        p {
+            text-align: justify;
+        }
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            position: relative; /* Ensure the z-index is applied */
+            z-index: 10; /* Higher z-index to appear in front */            
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin-right: 10px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #aaa687;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "❄️";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        input:checked + .slider {
+            background-color: #769d3b;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .cta {
+            width: 100%;
+            border: 2px solid rgba(204,200,169,0.5);
+            background: linear-gradient(to top, rgba(204,200,169,0.5), rgba(204,200,169,0.2));
+
+            padding: 0px 15px;
+            border-radius: 15px 15px 15px 15px;
+            box-sizing: border-box; /* Ensure padding and border are included in the height */
+        }
+
+        .cta form {
+            display: flex;
+            width: 100%;
+        }
+        
+        .cta input[type="email"] {
+            flex-grow: 1;
+            height: 50px;
+            border: 2px solid #fff;
+
+            font-size: 16px;
+            background: linear-gradient(to top, #fff, #ccc8a9);
+            padding: 0px 0px 0px 12px;
+            color: #000;
+            text-align: left;
+            box-sizing: border-box; /* Ensure padding and border are included in the height */
+        }
+        
+        .cta button {
+            height: 50px;
+            width: 150px; /* Set a fixed width for the button */
+            background: linear-gradient(to top, #e6b800, #cc8400); /* Darker shades */
+            color: #111;
+            border: 2px solid #e6b800; /* Darker border color */
+            border-radius: 10px 10px 10px 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0px 10px 10px 5px; /* Add space between the button and the input field */
+            box-sizing: border-box; /* Ensure padding and border are included in the height */
+        }
+        cta input[type="email"]:focus,
+        .cta button:focus {
+            outline: none; /* Remove default outline */
+            box-shadow: 0 0 15px rgba(244, 186, 76, 0.5); /* Apply shadow color */
+            background: linear-gradient(to top, #ffd700, #ffa500);            
+        }
+
+        @media (max-width: 768px) {
+            .cta form {
+                flex-direction: column; /* Stack the input and button vertically */
+            }
+            .cta input[type="email"] {
+                border-radius: 10px; /* Adjust border-radius for standalone input */
+                margin: 10px; /* Adjust margin for standalone input */
+            }
+            .cta button {
+                width: 100%; /* Make button full width */
+                border-radius: 10px; /* Adjust border-radius for standalone button */
+                margin: 10px; /* Adjust margin for standalone button */
+            }
+        }        
+
+        a {
+            color: #e6b800;
+        }
+        a:visited {
+            color: #ffa500;            
+        }

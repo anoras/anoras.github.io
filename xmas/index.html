@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Chronicles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toggle-container">
+        <label class="switch">
+            <input checked type="checkbox" id="toggleSnow">
+            <span class="slider round"></span>
+        </label>
+        <label for="toggleSnow">Let it snow! 🌨️</label>
+    </div>
+    <div class="snow">
+        <div id="snow" data-count="200"></div>
+    </div>
+    <div id="snow" data-count="200"></div>    
+    <div class="container">
+        <div class="header">
+            <img src="cclogo.png" alt="Christmas Chronicles">
+        </div>
+        <div class="content">
+            <h1>Experience Something SpeciaL This Christmas</h1>
+            <p>🎁 Step into a magical retrospective where holiday traditions meet cutting-edge technology in <strong>"Christmas Chronicles."</strong> This exclusive presentation invites you to explore how computers have interwoven themselves into the heart of Christmas celebrations from the 1950s to today.</p>
+            <p>Journey back to the early days of digital holiday cheer, uncovering pioneering pixel-powered Christmas decorations, Santa's favourite programming language, and whimsical winter wonderlands when computers were as magical as Christmas itself.</p>
+            <p>From the early days of digital holiday cheer to the excitement of the times when home computers first brought festive graphics to life, witness how Santa ventured into the digital realm and how people "teched the halls" with digital Christmas cheer.</p>
+            <p>Join us as we go carolling with music played by computers, from early experiments to modern AI-generated carols, and discover how even humble office equipment has been used to play holiday tunes.</p>
+            <p>Hear heartwarming holiday tales: how quick-thinking engineers saved Christmas for hundreds of children by fixing a bug; how a pioneering spirit created digital Yuletide greetings to cheer up a relative in hospital; and how an unlucky programmer accidentally invented a computer virus as naughty as Krampus.</p>
+            <p>This enchanting journey through the digital evolution of Christmas will be a ride that only Rudolph, Dasher, Dancer, Prancer, Vixen, Comet, Cupid, Donner, and Blitzen can match. Join us and rediscover the joy and wonder of Christmas, brought to life through the magic of technology!</p>
+        </div>
+        <div class="cta">
+            <p>🎅🏼 Limited number dates available. Get in touch now to secure a booking for your Christmas party, yuletide customer event, social function or other christmassy happening!</p>
+            <form action="https://formspree.io/f/xovawave?_next=https://andersnoras.com/xmas/thanks.html" method="POST">
+                <input type="email" name="email" placeholder="santa@northpole.com" required>
+                <button type="submit">Enquire</button>
+            </form>
+        </div>
+        <div class="content">
+            <h1>What's this?</h1>
+            <p>🎄Christmas Chronicles is an enchanting Christmas-themed presentation by the renowned Anders Norås, exclusively available for private events.</p>
+            <p>This magical presentation takes you on a sleigh ride through history, where computers and digital culture meet the wonder of Christmas. Christmas Chronicles promises the high production value that fans have come to expect from Anders, akin to his famous talks like <em>A Brief History of Computer Music</em> and <em>Marvels of Teenage Engineering.</em></p>
+            <p>Anders Norås is a celebrated speaker, known for his energetic and entertaining presentations, with over a hundred conference appearances to his name. His talks appeal to a wide range of audiences, making him a beloved figure in the speaking circuit.</p>
+            <p>Don’t miss out on this festive extravaganza! Christmas Chronicles will be available for a limited number of dates in November and December 2024. If you want to be one of the lucky few to experience this show, be sure to book early and add a touch of Christmas magic to your event.</p>
+        </div>
+        <div class="content">
+            <h1>Watch the trailer</h1>
+            <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/996317792?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Anders Norås presents Christmas Chronicles"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>       
+        <footer class="content">
+            <p><small>✨ Chritmas Chronicles is a production of Pratemaker Norås and is not affiliated with any other Christmas Chronicles. All rights reserved. 🍪 This site does not have any Christmas cookies.</small></p>
+        </footer> 
+    </div>
+    <script src="pure-snow.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const toggleSnow = document.getElementById('toggleSnow');
+            const snowContainer = document.getElementById('snow');
+    
+            toggleSnow.addEventListener('change', () => {
+                if (toggleSnow.checked) {
+                    snowContainer.style.display = 'block';
+                } else {
+                    snowContainer.style.display = 'none';
+                }
+            });
+            snowContainer.style.display = toggleSnow.checked ? 'block' : 'none';
+        });
+    </script>    
+</body>
+</html>

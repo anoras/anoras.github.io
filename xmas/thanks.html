@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Chronicles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="toggle-container">
+        <label class="switch">
+            <input checked type="checkbox" id="toggleSnow">
+            <span class="slider round"></span>
+        </label>
+        <label for="toggleSnow">Let it snow! 🌨️</label>
+    </div>
+    <div class="snow">
+        <div id="snow" data-count="200"></div>
+    </div>
+    <div id="snow" data-count="200"></div>    
+    <div class="container">
+        <div class="header">
+            <img src="cclogo.png" alt="Christmas Chronicles">
+        </div>
+        <div class="content">
+            <h1>Thank you for Your Booking Enquiry!</h1>
+            <p>🎅🏼 We have received your booking enquiry for "Christmas Chronicles"! Santa’s little helpers will be in touch with you shortly to secure your date for an extraordinary Christmas party. Get ready to add a touch of magic and festive cheer to your event!</p>
+            <p>Have a merry Christmas.</p>
+            <p><a href="index.html">Back to the main page.</a></p>
+        </div>
+        <footer class="content">
+            <p><small>✨ Chritmas Chronicles is a production of Pratemaker Norås and is not affiliated with any other Christmas Chronicles. All rights reserved. 🍪 This site does not have any Christmas cookies.</small></p>
+        </footer> 
+    </div>
+    <script src="pure-snow.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const toggleSnow = document.getElementById('toggleSnow');
+            const snowContainer = document.getElementById('snow');
+    
+            toggleSnow.addEventListener('change', () => {
+                if (toggleSnow.checked) {
+                    snowContainer.style.display = 'block';
+                } else {
+                    snowContainer.style.display = 'none';
+                }
+            });
+            snowContainer.style.display = toggleSnow.checked ? 'block' : 'none';
+        });
+    </script>    
+</body>
+</html>
