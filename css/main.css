@@ -271,12 +271,17 @@ header {
   margin-left: 0px;
  }
 
+ footer {
+  font-family: 'Noto Serif', serif;
+  margin-left: 32px;
+ }
+
 #nametag {
   width: 400px;
   background-color: deeppink;
   text-align: left;
   position: absolute;
-  top:0;
+  top:56px;
   left: 80px;
   height: 400px;
   padding-left: 10px;
@@ -285,7 +290,7 @@ header {
 }
 h1 {
   position: relative;
-  top: -80px;
+  top: -48px; /* -80px + 32px */
   font-size: 72pt;
   color: white;
   font-family: 'Noto Serif', serif;
@@ -301,7 +306,7 @@ h1 {
   width: 668px;
   height: 1272px;
   left: 844px;
-  top: 1295px;
+  top: 1327px; /* 1295px + 32px */
   animation: headnod 2s infinite;
   transform-origin: top right;
 }
@@ -312,7 +317,7 @@ h1 {
   width: 1083px;
   height: 1220px;
   left: 960px;
-  top: 260px;
+  top: 292px; /* 260px + 32px */
   animation: heartbeat 1s infinite;
   transform-origin: bottom;
 }
@@ -351,7 +356,7 @@ h1 {
 #recordcontainer {
   position: absolute;
   left: 400px;
-  top: 1550px;
+  top: 1582px; /* 1550px + 32px */
   z-index: 2;
   transform: scale(0.75,0.35);
 }
