@@ -1,7 +1,7 @@
         body {
             margin: 0;
             font-family: Inter, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-            background-color: #000;
+            background-color: #211132;
             color: #fff;
             text-align: center;
         }
@@ -43,6 +43,10 @@
                 display: block;
                 margin: 0 auto 10px;
             }
+        }
+        .snow {
+            height: 100vh;
+            position: absolute;
         }
         .snowflake {
             z-index: -1000;
